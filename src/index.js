@@ -3,6 +3,7 @@ const argon2 = require('argon2');
 const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
+app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 const db = new sqlite3.Database('./users.db');
